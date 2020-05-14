@@ -1,19 +1,23 @@
 #include "card.hpp"
+#include "participant.hpp"
 #include <vector>
 using std::vector;
 
-class Participant
+Participant::Participant(int playerNum)
 {
-public:
-	int PlayerNum;
-	int score = 0;
-	vector<Card *> * Hand;
-	int CurrentHandValue;
-	const static int StartingHand = 2;
+	this->Hand = new vector<Card *>();
+	setStartingHand(5);
+	this->score = 0.0;
+}
 
-	Participant()
-	{
-		Hand = new vector<Card *>();
-	}
-	
-};
+int Participant::getStartingHand()
+{
+	return m_StartingHand;
+}
+
+void Participant::setStartingHand(int val)
+{
+	this->m_StartingHand = val;
+}
+
+

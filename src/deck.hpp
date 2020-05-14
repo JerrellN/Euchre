@@ -6,13 +6,14 @@ using std::vector;
 #include "card.hpp"
 #include <sstream>
 using std::stringstream;
+#include <algorithm>
 
 class Deck
 {
 private:
 
-	const string Suits[4];
-	static const int DeckSize;
+	string Suits[4];
+	static int DeckSize;
 	string m_suits;
 
 public:
@@ -25,7 +26,8 @@ public:
     string King;
 	
 
-	Deck(){}
+	Deck(){};
+	void Shuffle(){};
 	
 };
 

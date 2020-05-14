@@ -7,14 +7,22 @@ using std::vector;
 
 class Participant
 {
+private: 
+	
+	static int m_StartingHand;
+
+	void setStartingHand(int val){};
 public:
 	int PlayerNum;
-	int score;
+	float score;
 	vector<Card *> * Hand;
 	int CurrentHandValue;
-	const static int StartingHand;
+	
 
-	Participant(){};
+	Participant(int playerNum){};
+
+	int getStartingHand(){};
+
 	
 };
 
