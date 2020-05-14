@@ -110,6 +110,7 @@ void main()
     float handValue = 0.0;
     Participant * player =  new Participant(1);
     Deck * deck = new Deck();
+    deck->Shuffle();
     GiveHand(player, deck);
     TrumpSuit = SetTrump(TrumpInput());
     TrumpColorRed = TrumpRed(TrumpSuit);
